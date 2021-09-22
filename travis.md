@@ -14,3 +14,5 @@ before_install: #passos para serem executados antes de executar a tarefa princip
 #contém os comandos necessários para executar o teste
 script:
   - docker run -e CI=true USERNAME/docker-react npm run test
+
+#testando
