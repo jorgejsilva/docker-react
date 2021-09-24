@@ -15,4 +15,13 @@ before_install: #passos para serem executados antes de executar a tarefa princip
 script:
   - docker run -e CI=true USERNAME/docker-react npm run test
 
-#testando
+##Fazendo deploy no elasticbeanstalk
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"  #inserir a região onde o elasticbeanstalk foi criado.
+  app: docker #node dadado na hora da criação do elasticbenastalk 
+  env: "Docker-env" #nome do environment criado pelos elasticbeanstalk
+  bucket_name: "elasticbeanstalk-us-east-2-494106798208" #nome do s3 bucket criado para o projeto
+  bucket_path: "docker" #path no bucket para fazer o deploy do projeto. Utilizar o mesmo valor difinido em app:
+  on: #só faz o deploy quando existir um commit na branch master
+    branch: master
