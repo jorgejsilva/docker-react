@@ -1,4 +1,4 @@
-# YAML
+```` YAML
 ### Configurando o travis 
 
 Devemos criar um arquivo chamado .travis.yml dentro do nosso repositório 
@@ -25,3 +25,5 @@ deploy:
   bucket_path: "docker" #path no bucket para fazer o deploy do projeto. Utilizar o mesmo valor difinido em app:
   on: #só faz o deploy quando existir um commit na branch master
     branch: master
+
+``` 
