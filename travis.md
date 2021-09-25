@@ -26,4 +26,3 @@ deploy:
   on: #só faz o deploy quando existir um commit na branch master
     branch: master
 
-``` 
